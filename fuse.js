@@ -6,7 +6,8 @@ const {
   RawPlugin,
   ReplacePlugin,
   QuantumPlugin,
-  Sparky
+  Sparky,
+  JSONPlugin
 } = require("fuse-box");
 
 const BUILD_PATH = "build/";
@@ -36,6 +37,7 @@ function init(prod) {
     plugins: [
       WebIndexPlugin({ template: "src/index.html" }),
       RawPlugin([".vert", ".frag"]),
+      JSONPlugin(),
       ReplacePlugin({
         CANVAS_RENDERER: JSON.stringify(true),
         WEBGL_RENDERER: JSON.stringify(true)
