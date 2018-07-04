@@ -7,7 +7,9 @@ const {
   ReplacePlugin,
   QuantumPlugin,
   Sparky,
-  JSONPlugin
+  JSONPlugin,
+  CSSPlugin,
+  SassPlugin
 } = require("fuse-box");
 
 const BUILD_PATH = "build/";
@@ -35,6 +37,8 @@ function init(prod) {
     output: "build/$name.js",
     useTypescriptCompiler: true,
     plugins: [
+      CSSPlugin(),
+      [SassPlugin({ importer: true, omitSourceMapUrl: !prod }), CSSPlugin()],
       WebIndexPlugin({ template: "src/index.html" }),
       RawPlugin([".vert", ".frag"]),
       JSONPlugin(),

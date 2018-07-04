@@ -1,5 +1,7 @@
 import * as Phaser from "phaser";
-import GameScene from "./scenes/gamescene";
+import GameScene from "./scenes/game-scene";
+import NameSelectionScene from "./scenes/name-selection-scene";
+import "./style/main.sass";
 
 const gameWidth = 512;
 const gameHeight = 288;
@@ -19,7 +21,8 @@ var config = {
     }
   },
   zoom: 4,
-  scene: [GameScene]
+  scene: [NameSelectionScene, GameScene]
 };
 
 const game = new Phaser.Game(config);
+//game.add.plugin(PhaserInput.Plugin);

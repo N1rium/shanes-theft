@@ -21,7 +21,7 @@ setInterval(function() {
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
-    super({ key: "gamescene" });
+    super({ key: "game-scene" });
     this.cloudVelocity = 0.025;
     analytics.page({
       category: "Game",
