@@ -45,7 +45,8 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.socket = io();
+    this.socket = io({ transports: ["websocket"], upgrade: false });
+    //this.socket = io();
     var self = this;
 
     animationSetup(self);
