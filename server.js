@@ -31,14 +31,21 @@ io.on("connection", function(socket) {
     isTag: tagId == socket.id
   };
 
+  passTag = () => {
+    const arr = Object.keys(players);
+    return (arr.length && arr[0]) || null;
+  };
+
   socket.emit("currentPlayers", players);
   socket.broadcast.emit("newPlayer", players[socket.id]);
   socket.on("disconnect", function() {
     console.log("user disconnected: ", socket.id);
-    if (tagId == socket.id) {
-      tagId = null;
-    }
     delete players[socket.id];
+    if (tagId == socket.id) {
+      tagId = passTag();
+      socket.emit("newTag", tagId);
+      socket.broadcast.emit("newTag", tagId);
+    }
     io.emit("disconnect", socket.id);
   });
 
