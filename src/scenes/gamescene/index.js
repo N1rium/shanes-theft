@@ -173,6 +173,8 @@ export default class GameScene extends Phaser.Scene {
     const self = this;
     clouds.x -= this.cloudVelocity * dt;
     clouds1.x -= this.cloudVelocity * dt;
+    const delta = Math.min(dt, 16.6);
+
     if (clouds.x <= -512) {
       clouds.x = 1536;
     }
@@ -183,19 +185,19 @@ export default class GameScene extends Phaser.Scene {
     if (player) {
       player.setVelocity(0);
       if (left.isDown) {
-        player.setVelocityX(-velocity * dt);
+        player.setVelocityX(-velocity * delta);
         lastDir = "left";
       }
       if (right.isDown) {
-        player.setVelocityX(velocity * dt);
+        player.setVelocityX(velocity * delta);
         lastDir = "right";
       }
       if (up.isDown) {
-        player.setVelocityY(-velocity * dt);
+        player.setVelocityY(-velocity * delta);
         lastDir = "up";
       }
       if (down.isDown) {
-        player.setVelocityY(velocity * dt);
+        player.setVelocityY(velocity * delta);
         lastDir = "down";
       }
 
