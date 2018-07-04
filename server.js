@@ -33,7 +33,7 @@ io.on("connection", function(socket) {
 
   passTag = () => {
     const arr = Object.keys(players);
-    return (arr.length && arr[0]) || null;
+    return (arr.length && arr[arr.length - 1]) || null;
   };
 
   socket.emit("currentPlayers", players);
