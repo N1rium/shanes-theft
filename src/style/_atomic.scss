@@ -1,0 +1,395 @@
+@import "./_vars.sass";
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-basis-5 {
+  flex-basis: 5%;
+}
+.flex-basis-10 {
+  flex-basis: 10%;
+}
+.flex-basis-20 {
+  flex-basis: 20%;
+}
+.flex-basis-25 {
+  flex-basis: 25%;
+}
+.flex-basis-33 {
+  flex-basis: 33%;
+}
+.flex-basis-40 {
+  flex-basis: 40%;
+}
+.flex-basis-50 {
+  flex-basis: 50%;
+}
+.flex-basis-60 {
+  flex-basis: 60%;
+}
+.flex-basis-75 {
+  flex-basis: 75%;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.self-baseline {
+  align-self: baseline;
+}
+.self-stretch {
+  align-self: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+.content-end {
+  align-content: flex-end;
+}
+.content-center {
+  align-content: center;
+}
+.content-between {
+  align-content: space-between;
+}
+.content-around {
+  align-content: space-around;
+}
+.content-stretch {
+  align-content: stretch;
+}
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.m0 {
+  margin: 0;
+}
+.mt0 {
+  margin-top: 0;
+}
+.mr0 {
+  margin-right: 0;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.ml0 {
+  margin-left: 0;
+}
+.mx0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.m1 {
+  margin: $margin-1;
+}
+.mt1 {
+  margin-top: $margin-1;
+}
+.mr1 {
+  margin-right: $margin-1;
+}
+.mb1 {
+  margin-bottom: $margin-1;
+}
+.ml1 {
+  margin-left: $margin-1;
+}
+.mx1 {
+  margin-left: $margin-1;
+  margin-right: $margin-1;
+}
+.my1 {
+  margin-top: $margin-1;
+  margin-bottom: $margin-1;
+}
+
+.m2 {
+  margin: $margin-2;
+}
+.mt2 {
+  margin-top: $margin-2;
+}
+.mr2 {
+  margin-right: $margin-2;
+}
+.mb2 {
+  margin-bottom: $margin-2;
+}
+.ml2 {
+  margin-left: $margin-2;
+}
+.mx2 {
+  margin-left: $margin-2;
+  margin-right: $margin-2;
+}
+.my2 {
+  margin-top: $margin-2;
+  margin-bottom: $margin-2;
+}
+
+.m3 {
+  margin: $margin-3;
+}
+.mt3 {
+  margin-top: $margin-3;
+}
+.mr3 {
+  margin-right: $margin-3;
+}
+.mb3 {
+  margin-bottom: $margin-3;
+}
+.ml3 {
+  margin-left: $margin-3;
+}
+.mx3 {
+  margin-left: $margin-3;
+  margin-right: $margin-3;
+}
+.my3 {
+  margin-top: $margin-3;
+  margin-bottom: $margin-3;
+}
+
+.m4 {
+  margin: $margin-4;
+}
+.mt4 {
+  margin-top: $margin-4;
+}
+.mr4 {
+  margin-right: $margin-4;
+}
+.mb4 {
+  margin-bottom: $margin-4;
+}
+.ml4 {
+  margin-left: $margin-4;
+}
+.mx4 {
+  margin-left: $margin-4;
+  margin-right: $margin-4;
+}
+.my4 {
+  margin-top: $margin-4;
+  margin-bottom: $margin-4;
+}
+
+.mxn1 {
+  margin-left: $margin-1;
+  margin-right: $margin-1;
+}
+.mxn2 {
+  margin-left: $margin-2;
+  margin-right: $margin-2;
+}
+.mxn3 {
+  margin-left: $margin-3;
+  margin-right: $margin-3;
+}
+.mxn4 {
+  margin-left: $margin-4;
+  margin-right: $margin-4;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Basscss Padding */
+
+.p0 {
+  padding: 0;
+}
+.pt0 {
+  padding-top: 0;
+}
+.pr0 {
+  padding-right: 0;
+}
+.pb0 {
+  padding-bottom: 0;
+}
+.pl0 {
+  padding-left: 0;
+}
+.px0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.py0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.p1 {
+  padding: $margin-1;
+}
+.pt1 {
+  padding-top: $margin-1;
+}
+.pr1 {
+  padding-right: $margin-1;
+}
+.pb1 {
+  padding-bottom: $margin-1;
+}
+.pl1 {
+  padding-left: $margin-1;
+}
+.py1 {
+  padding-top: $margin-1;
+  padding-bottom: $margin-1;
+}
+.px1 {
+  padding-left: $margin-1;
+  padding-right: $margin-1;
+}
+
+.p2 {
+  padding: $margin-2;
+}
+.pt2 {
+  padding-top: $margin-2;
+}
+.pr2 {
+  padding-right: $margin-2;
+}
+.pb2 {
+  padding-bottom: $margin-2;
+}
+.pl2 {
+  padding-left: $margin-2;
+}
+.py2 {
+  padding-top: $margin-2;
+  padding-bottom: $margin-2;
+}
+.px2 {
+  padding-left: $margin-2;
+  padding-right: $margin-2;
+}
+
+.p3 {
+  padding: $margin-3;
+}
+.pt3 {
+  padding-top: $margin-3;
+}
+.pr3 {
+  padding-right: $margin-3;
+}
+.pb3 {
+  padding-bottom: $margin-3;
+}
+.pl3 {
+  padding-left: $margin-3;
+}
+.py3 {
+  padding-top: $margin-3;
+  padding-bottom: $margin-3;
+}
+.px3 {
+  padding-left: $margin-3;
+  padding-right: $margin-3;
+}
+
+.p4 {
+  padding: $margin-4;
+}
+.pt4 {
+  padding-top: $margin-4;
+}
+.pr4 {
+  padding-right: $margin-4;
+}
+.pb4 {
+  padding-bottom: $margin-4;
+}
+.pl4 {
+  padding-left: $margin-4;
+}
+.py4 {
+  padding-top: $margin-4;
+  padding-bottom: $margin-4;
+}
+.px4 {
+  padding-left: $margin-4;
+  padding-right: $margin-4;
+}

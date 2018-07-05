@@ -21,8 +21,7 @@ var config = {
     }
   },
   zoom: 4,
-  scene: [NameSelectionScene, GameScene]
+  scene: [GameScene]
 };
 
 const game = new Phaser.Game(config);
-//game.add.plugin(PhaserInput.Plugin);
